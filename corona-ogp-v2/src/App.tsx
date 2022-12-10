@@ -4,7 +4,7 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      hekki!
+      東京の新型コロナ感染者数
     </div>
   );
 }
