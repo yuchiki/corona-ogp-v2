@@ -3,23 +3,20 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MetaTags from 'react-meta-tags';
-
-const MyMetaTags = () =>
-  <MetaTags>
-    <title>東京の新型コロナ感染者数</title>
-    <meta property="og:title" content="東京の感染者数" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="foo foo foo" />
-    <meta property="og:url" content="http://tokyo-corona-digest.yuchiki.net/" />
-  </MetaTags>
+import Helmet from 'react-helmet';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <MyMetaTags />
+    <Helmet >
+      <title>東京の新型コロナ感染者数</title>
+      <meta property="og:title" content="東京の感染者数" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="foo foo foo" />
+      <meta property="og:url" content="http://tokyo-corona-digest.yuchiki.net/" />
+    </Helmet>
     <App />
   </React.StrictMode>
 );
