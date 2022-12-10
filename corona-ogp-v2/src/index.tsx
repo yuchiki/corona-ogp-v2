@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+const MyHeader = () =>
+  <head>
+    <meta property="og:title" content="東京の感染者数" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="foo foo foo" />
+    <meta property="og:url" content="http://tokyo-corona-digest.yuchiki.net/" />
+  </head>
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+
     <App />
   </React.StrictMode>
 );
